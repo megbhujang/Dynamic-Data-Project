@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Dynamic Data Sharing</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="./css/style.css"/>
+	<script type="text/javascript" src="js/bootstrap.min.js"/></script>
+	<script type="text/javascript" src="js/jquery.min.js"/></script>
+	<script type="text/javascript" src="js/popper.min.js"/></script>
+</head>
+
+<style>
+  body {
+      position: relative; 
+background-image:url('img/data-original.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size:cover;
+  }
+</style>
+
+  <script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+<body data-spy="scroll" data-target=".navbar" data-offset="100">
+	<header class="fixed-top">
+		<div class="container">
+			
+			<div id="branding">
+				<h1><span class="highlight">DYNAMIC DATA SHARING USING CRYPTO ANALYSIS</span></h1>
+				
+<br>
+
+			</div>
+
+		</div>
+
+	<section id="navy">
+		<div class="container">
+			<nav>
+				<ul>
+                                    <b><li class="active"><a href=#home>HOME</a></li>
+<li><a href=#admin>ADMIN</a></li>
+					<li><a href=#server>SERVER</a></li>
+          <li><a href=#data_user>DATA USER</a></li>
+		
+          <li><a href=#reg>REGISTRATION</b></a></li></b>
+				</ul>
+			</nav>
+		</div>
+  </div>
+</div>
+</header>
+
+<div id="home" class="container_space">
+<br>
+</div>
+<div class="container1">
+  <div class="row">
+    <div class="col"><br><br><br><br><br>
+<br>
+      <h2 color:#5df9ff><b><center>WELCOME</center></b></h2>
+<br>
+</div>
+</div>
+<div class="row" >
+      <center><b><img src="img/welcome.jpg" id="image" /></center></b></h2>
+<br>
+</div>
+</div>
+<div id="admin" class="container_space">
+<br><br><br><br><br><br>
+</div>
+<div class="container2">
+  <div class="row">
+
+ <div class="col"><br><br><br><br>
+<center>
+<h2>ADMIN</h2>
+<br><br>
+ <form>
+    Username: <input type="text" placeholder="Username" id="text1" /><br />
+    Password: <input type="password" placeholder="Password" id="text2" /><br />
+    <input type="button" value="Login"  onclick="javascript:validate1()" />
+</form>
+<script type="text/javascript">
+function validate1()
+{
+    if(   document.getElementById("text1").value == "admin"
+       && document.getElementById("text2").value == "admin" )
+    {
+        alert( "validation succeeded" );
+        location.href="realadmin.jsp";
+    }
+    else
+    {
+        alert( "Try Again" );
+    }
+}
+</script>
+</center>
+<br><br>
+</div>
+ <div class="col"><br>
+<center><img src="img/admin.jpg" id="image1" /></center></b>
+</div>
+</div>
+</div>
+
+<div id="server"  class="container_space">
+<br><br><br><br>
+</div>
+<div class="container3">
+  <div class="row">
+
+ 
+ <div class="col"><br>
+<center><img src="img/server.jpg" id="image1" /></center></b>
+</div>
+<div class="col"><br><br>
+
+<h2>SERVER</h2>
+<br><br>
+ <form>
+    Username: <input type="text" placeholder="Username" id="text11" /><br />
+    Password: <input type="password" placeholder="Password" id="text12" /><br />
+    <input type="button" value="Login"  onclick="javascript:validate()" />
+</form>
+<script type="text/javascript">
+function validate()
+{
+    if(   document.getElementById("text11").value == "server"
+       && document.getElementById("text12").value == "server" )
+    {
+        alert( "validation succeeded" );
+        location.href="admin.jsp";
+    }
+    else
+    {
+        alert( "Try Again" );
+    }
+}
+</script><br><br>
+</div>
+</div>
+</div>
+
+<div id="data_user" class="container_space">
+<br><br><br><br><br><br><br>
+</div>
+<div class="container4">
+  <div class="row">
+
+ <div class="col"><br><br><br><br>
+<center>
+<h2>DATA USER</h2>
+<br><br>
+ <form action="servlet/login" method="post">
+Username:    <input type="text" name="username" type="required" />
+<br><br>
+Password:     <input type="text" name="password" type="required" />
+<br><br><br>
+<input type="submit" value="Log In" />
+<br>
+</form><br>
+<b><a href="#reg" style="color:red"> New User? Click here to register! </a></b>
+</center>
+<br><br>
+</div>
+ <div class="col"><br>
+<center><img src="img/datauser.jpeg" id="image2" /></center></b>
+</div>
+</div>
+</div>
+
+<div id="reg"  class="container_space">
+<br><br><br>
+</div>
+<div class="container5">
+  <div class="row">
+
+ 
+ <div class="col"><br>
+<center><img src="img/reg.jpg" id="image2" /></center></b>
+</div>
+<div class="col"><br><br>
+<h2>REGISTRATION</h2>
+<br>
+ <form action="servlet/register" method="post">
+Name:                            <input type="text" name="name" type="required" />
+<br><br>
+Username:                     <input type="text" name="username" type="required" />
+<br><br>
+Password:                      <input type="text" name="password" type="required" />
+<br><br>
+Re-enter Password:        <input type="text" name="rpassword" type="required" />
+<br><br>
+Email:                           <input type="email" name="email" type="required" />
+<br><br>
+Mobile No:                   <input type="text" name="pno" type="required" />
+<br><br>
+
+<p>      <input type="submit" value="Register" />
+
+<input type="reset" value="Reset" /> </p>
+<br>
+</form><br><br>
+</div>
+</div>
+</div>
+
+
